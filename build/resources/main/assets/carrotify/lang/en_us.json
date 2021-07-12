@@ -1,0 +1,22 @@
+{
+  "itemGroup.carrotify.main_group": "Carrotify",
+  "item.carrotify.carrasteel_ingot": "Carrasteel Ingot",
+  "item.carrotify.diamond_nugget": "Diamond Nugget",
+  "item.carrotify.carrot_sword": "Carrot Sword",
+  "item.carrotify.carrot_pickaxe": "Carrot Pickaxe",
+  "item.carrotify.carrot_axe": "Carrot Axe",
+  "item.carrotify.carrot_hoe": "Carrot Hoe",
+  "item.carrotify.carrot_shovel": "Carrot Shovel",
+  "item.carrotify.carrot_bow": "Carrot Bow",
+  "item.carrotify.carrasteel_helmet": "Carrasteel Helmet",
+  "item.carrotify.carrasteel_chestplate": "Carrasteel Chestplate",
+  "item.carrotify.carrasteel_leggings": "Carrasteel Leggings",
+  "item.carrotify.carrasteel_boots": "Carrasteel Boots",
+  "item.carrotify.carrot_juice": "Carrot Juice",
+  "item.carrotify.carrot_pastry": "Carrot Pastry",
+  "item.carrotify.carrot_soup": "Carrot Soup",
+  "item.carrotify.diamond_carrot": "Diamond Carrot",
+  "item.carrotify.obsidian_carrot": "Obsidian Carrot",
+  "item.carrotify.unstable_carrot": "Unstable Carrot",
+  "block.carrotify.carrasteel_block": "Block of Carrasteel"
+}

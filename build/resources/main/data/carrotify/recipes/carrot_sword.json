@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_sword"
+  },
+  "addition": {
+    "item": "carrotify:carrasteel_ingot"
+  },
+  "result": {
+    "item": "carrotify:carrot_sword",
+    "count": 1
+  }
+}

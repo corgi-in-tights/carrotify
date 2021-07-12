@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_helmet"
+  },
+  "addition": {
+    "item": "carrotify:carrasteel_ingot"
+  },
+  "result": {
+    "item": "carrotify:carrasteel_helmet",
+    "count": 1
+  }
+}
