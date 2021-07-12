@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_boots"
+  },
+  "addition": {
+    "item": "carrotify:carrasteel_ingot"
+  },
+  "result": {
+    "item": "carrotify:carrasteel_boots",
+    "count": 1
+  }
+}
