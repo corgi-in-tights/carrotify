@@ -22,11 +22,11 @@ import net.minecraft.world.World;
 import java.util.List;
 
 import static ca.thecorgi.carrotify.Carrotify.UnstableCarrotEntityType;
-import static ca.thecorgi.carrotify.client.PacketReciever.PacketID;
+import static ca.thecorgi.carrotify.client.PacketReceiver.PacketID;
 import static ca.thecorgi.carrotify.registry.itemRegistry.UNSTABLE_CARROT;
 
 
-@SuppressWarnings("EntityConstructor")
+@SuppressWarnings({"EntityConstructor", "rawtypes"})
 public class UnstableCarrotEntity extends ThrownItemEntity {
     public UnstableCarrotEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
@@ -35,11 +35,6 @@ public class UnstableCarrotEntity extends ThrownItemEntity {
     public UnstableCarrotEntity(World world, LivingEntity owner) {
         super(UnstableCarrotEntityType, owner, world);
     }
-
-
-//    public UnstableCarrotEntity(World world, double x, double y, double z) {
-//        super(UnstableCarrotEntityType, x, y, z, world);
-//    }
 
     @Override
     protected Item getDefaultItem() {
@@ -83,10 +78,10 @@ public class UnstableCarrotEntity extends ThrownItemEntity {
             this.discard();
             Box box = this.getBoundingBox().expand(1.4, 1.4, 1.4);
             List<LivingEntity> livingEntities = world.getEntitiesByClass(LivingEntity.class, box, EntityPredicates.VALID_LIVING_ENTITY);
-            world.playSound(null,getBlockPos(),SoundEvents.ENTITY_DRAGON_FIREBALL_EXPLODE, SoundCategory.BLOCKS,0.8F,0.5F);
+            world.playSound(null,getBlockPos(),SoundEvents.ENTITY_DRAGON_FIREBALL_EXPLODE, SoundCategory.BLOCKS,0.8F,0.8F);
             if (!livingEntities.isEmpty() && !this.world.isClient()) {
                 for (LivingEntity livingEntity : livingEntities) {
-                    livingEntity.damage(DamageSource.thrownProjectile(this, this.getOwner()), (float)4);
+                    livingEntity.damage(DamageSource.thrownProjectile(this, this.getOwner()), 3);
                 }
             }
         }
