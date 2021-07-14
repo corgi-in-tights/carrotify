@@ -1,8 +1,10 @@
 package ca.thecorgi.carrotify.registry;
 
+import io.netty.util.Constant;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
 import net.minecraft.loot.entry.EmptyEntry;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
@@ -18,8 +20,8 @@ public class lootTableRegistry {
             if (CARROTS_LOOT_TABLE_ID.equals(id)) {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .with(ItemEntry.builder(UNSTABLE_CARROT).weight(85))
-                        .with(EmptyEntry.Serializer().weight(15));
+                        .with(ItemEntry.builder(UNSTABLE_CARROT).weight(6))
+                        .with(EmptyEntry.Serializer().weight(94));
 
                 table.pool(poolBuilder);
             }

@@ -11,6 +11,7 @@ import net.minecraft.util.registry.Registry;
 
 import static ca.thecorgi.carrotify.registry.blockRegistry.registerBlocks;
 import static ca.thecorgi.carrotify.registry.itemRegistry.registerItems;
+import static ca.thecorgi.carrotify.registry.lootTableRegistry.registerLootTables;
 
 public class Carrotify implements ModInitializer {
     public static String ModID = "carrotify";
@@ -26,5 +27,6 @@ public class Carrotify implements ModInitializer {
     public void onInitialize() {
         registerItems();
         registerBlocks();
+        registerLootTables();
     }
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CCC",
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "carrotify:carrasteel_ingot"
+    }
+  },
+  "result": {
+    "item": "carrotify:carrasteel_block",
+    "count": 1
+  }
+}

@@ -2,6 +2,8 @@ package ca.thecorgi.carrotify.registry;
 
 import ca.thecorgi.carrotify.components.CarrotArmorComponent;
 import ca.thecorgi.carrotify.components.CarrotFoodComponent;
+import ca.thecorgi.carrotify.items.CarrotJuiceItem;
+import ca.thecorgi.carrotify.items.CarrotSoupItem;
 import ca.thecorgi.carrotify.items.UnstableCarrotItem;
 import ca.thecorgi.carrotify.items.tools.CarrotAxeItem;
 import ca.thecorgi.carrotify.items.tools.CarrotHoeItem;
@@ -10,10 +12,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static ca.thecorgi.carrotify.Carrotify.ModID;
 import static ca.thecorgi.carrotify.components.CarrotToolComponent.INSTANCE;
@@ -25,17 +23,17 @@ public class itemRegistry {
     public static final Item CARRASTEEL_INGOT = new Item(new FabricItemSettings().group(CarrotifyMain));
     public static final Item DIAMOND_NUGGET = new Item(new FabricItemSettings().group(CarrotifyMain));
 
-    public static final Item CARROT_JUICE = new Item(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_JUICE).maxCount(8));
-    public static final Item CARROT_PASTRY = new Item(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_PASTRY).maxCount(16));
-    public static final Item CARROT_SOUP = new Item(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_SOUP).maxCount(1));
+    public static final CarrotJuiceItem CARROT_JUICE = new CarrotJuiceItem(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_JUICE).maxCount(8));
+    public static final CarrotSoupItem CARROT_SOUP = new CarrotSoupItem(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_SOUP).maxCount(1));
+    public static final Item CARROT_PASTRY = new Item(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_PASTRY).maxCount(32));
     public static final Item DIAMOND_CARROT = new Item(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.DIAMOND_CARROT).maxCount(64));
     public static final Item OBSIDIAN_CARROT = new Item(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.OBSIDIAN_CARROT).maxCount(64));
-    public static final Item UNSTABLE_CARROT = new UnstableCarrotItem(new Item.Settings().group(CarrotifyMain).maxCount(8));
+    public static final Item UNSTABLE_CARROT = new UnstableCarrotItem(new Item.Settings().group(CarrotifyMain).maxCount(16));
 
     public static final ToolItem CARROT_SWORD = new SwordItem(INSTANCE, 2,  -2.2F, new Item.Settings().group(CarrotifyMain));
     public static final ToolItem CARROT_PICKAXE = new CarrotPickaxeItem(INSTANCE, 1, -2.8F, new Item.Settings().group(CarrotifyMain));
     public static final ToolItem CARROT_AXE = new CarrotAxeItem(INSTANCE, 5, -3F, new Item.Settings().group(CarrotifyMain));
-    public static final ToolItem CARROT_HOE = new CarrotHoeItem(INSTANCE, -3, 0, new Item.Settings().group(CarrotifyMain));
+    public static final ToolItem CARROT_HOE = new CarrotHoeItem(INSTANCE, -2, 0, new Item.Settings().group(CarrotifyMain));
     public static final ToolItem CARROT_SHOVEL = new ShovelItem(INSTANCE, -1.5F, -3.0F, new Item.Settings().group(CarrotifyMain));
 
     public static BowItem CARROT_BOW = new BowItem(new FabricItemSettings().group(CarrotifyMain).maxDamage(650));

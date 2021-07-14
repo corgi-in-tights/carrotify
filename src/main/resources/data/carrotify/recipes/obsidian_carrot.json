@@ -1,20 +1,23 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " D ",
+    "ODO",
     "DCD",
-    " D "
+    "ODO"
   ],
   "key": {
-    "D": {
-      "item": "carrotify:diamond_nugget"
+    "O": {
+      "item": "minecraft:obsidian"
     },
     "C": {
       "item": "minecraft:carrot"
+    },
+    "D": {
+      "item": "carrotify:diamond_nugget"
     }
   },
   "result": {
-    "item": "carrotify:diamond_carrot",
+    "item": "carrotify:obsidian_carrot",
     "count": 1
   }
 }

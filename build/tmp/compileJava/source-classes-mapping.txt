@@ -1,24 +1,28 @@
 ca/thecorgi/carrotify/items/tools/CarrotPickaxeItem.java
  ca.thecorgi.carrotify.items.tools.CarrotPickaxeItem
-ca/thecorgi/carrotify/entities/EntitySpawnPacket.java
- ca.thecorgi.carrotify.entities.EntitySpawnPacket
- ca.thecorgi.carrotify.entities.EntitySpawnPacket$PacketBufUtil
+ca/thecorgi/carrotify/client/ClientInit.java
+ ca.thecorgi.carrotify.client.ClientInit
+ca/thecorgi/carrotify/client/PacketReciever.java
+ ca.thecorgi.carrotify.client.PacketReciever
+ca/thecorgi/carrotify/registry/blockRegistry.java
+ ca.thecorgi.carrotify.registry.blockRegistry
+ca/thecorgi/carrotify/items/UnstableCarrotItem.java
+ ca.thecorgi.carrotify.items.UnstableCarrotItem
 ca/thecorgi/carrotify/items/tools/CarrotAxeItem.java
  ca.thecorgi.carrotify.items.tools.CarrotAxeItem
 ca/thecorgi/carrotify/items/tools/CarrotHoeItem.java
  ca.thecorgi.carrotify.items.tools.CarrotHoeItem
-ca/thecorgi/carrotify/components/CarrotFoodComponent.java
- ca.thecorgi.carrotify.components.CarrotFoodComponent
-ca/thecorgi/carrotify/client/ClientInit.java
- ca.thecorgi.carrotify.client.ClientInit
-ca/thecorgi/carrotify/items/UnstableCarrotItem.java
- ca.thecorgi.carrotify.items.UnstableCarrotItem
-ca/thecorgi/carrotify/client/PacketReciever.java
- ca.thecorgi.carrotify.client.PacketReciever
+ca/thecorgi/carrotify/entities/EntitySpawnPacket.java
+ ca.thecorgi.carrotify.entities.EntitySpawnPacket
+ ca.thecorgi.carrotify.entities.EntitySpawnPacket$PacketBufUtil
 ca/thecorgi/carrotify/registry/lootTableRegistry.java
  ca.thecorgi.carrotify.registry.lootTableRegistry
 ca/thecorgi/carrotify/client/CarrotModelProvider.java
  ca.thecorgi.carrotify.client.CarrotModelProvider
+ca/thecorgi/carrotify/items/CarrotSoupItem.java
+ ca.thecorgi.carrotify.items.CarrotSoupItem
+ca/thecorgi/carrotify/items/CarrotJuiceItem.java
+ ca.thecorgi.carrotify.items.CarrotJuiceItem
 ca/thecorgi/carrotify/components/CarrotArmorComponent.java
  ca.thecorgi.carrotify.components.CarrotArmorComponent
 ca/thecorgi/carrotify/components/CarrotToolComponent.java
@@ -27,8 +31,8 @@ ca/thecorgi/carrotify/Carrotify.java
  ca.thecorgi.carrotify.Carrotify
 ca/thecorgi/carrotify/registry/itemRegistry.java
  ca.thecorgi.carrotify.registry.itemRegistry
-ca/thecorgi/carrotify/registry/blockRegistry.java
- ca.thecorgi.carrotify.registry.blockRegistry
+ca/thecorgi/carrotify/components/CarrotFoodComponent.java
+ ca.thecorgi.carrotify.components.CarrotFoodComponent
 ca/thecorgi/carrotify/registry/ItemGroupRegistry.java
  ca.thecorgi.carrotify.registry.ItemGroupRegistry
 ca/thecorgi/carrotify/entities/UnstableCarrotEntity.java

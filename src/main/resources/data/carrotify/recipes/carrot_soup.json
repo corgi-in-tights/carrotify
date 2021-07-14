@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " D ",
-    "DCD",
-    " D "
+    "CCC",
+    "CCC",
+    " B "
   ],
   "key": {
-    "D": {
-      "item": "carrotify:diamond_nugget"
-    },
     "C": {
       "item": "minecraft:carrot"
+    },
+    "B": {
+      "item": "minecraft:bowl"
     }
   },
   "result": {
-    "item": "carrotify:diamond_carrot",
+    "item": "carrotify:carrot_soup",
     "count": 1
   }
 }
