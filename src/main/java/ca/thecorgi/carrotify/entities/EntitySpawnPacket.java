@@ -10,6 +10,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 
+@SuppressWarnings("deprecation")
 public class EntitySpawnPacket {
     public static Packet<?> create(Entity e, Identifier packetID) {
         if (e.world.isClient)

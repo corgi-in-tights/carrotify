@@ -1,10 +1,8 @@
 package ca.thecorgi.carrotify.client;
 
 import ca.thecorgi.carrotify.entities.EntitySpawnPacket;
-import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.Identifier;
@@ -14,9 +12,10 @@ import net.minecraft.util.registry.Registry;
 import java.util.UUID;
 
 import static ca.thecorgi.carrotify.Carrotify.ModID;
-import static ca.thecorgi.carrotify.Carrotify.UnstableCarrotEntityType;
 
-public class PacketReciever {
+
+@SuppressWarnings("deprecation")
+public class PacketReceiver {
     public static final Identifier PacketID = new Identifier(ModID, "spawn_packet");
     public static void receiveEntityPacket() {
         ClientSidePacketRegistry.INSTANCE.register(PacketID, (ctx, byteBuf) -> {

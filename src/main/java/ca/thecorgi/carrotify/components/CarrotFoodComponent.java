@@ -8,7 +8,7 @@ public class CarrotFoodComponent {
     public static final FoodComponent CARROT_JUICE = (new FoodComponent.Builder())
             .hunger(2)
             .saturationModifier(0.5F)
-            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 800, 0), 0.4F)
+            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 300, 0), 0.25F)
             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 300, 0), 0.25F)
             .snack()
             .alwaysEdible().build();

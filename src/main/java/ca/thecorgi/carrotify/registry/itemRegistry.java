@@ -23,7 +23,7 @@ public class itemRegistry {
     public static final Item CARRASTEEL_INGOT = new Item(new FabricItemSettings().group(CarrotifyMain));
     public static final Item DIAMOND_NUGGET = new Item(new FabricItemSettings().group(CarrotifyMain));
 
-    public static final CarrotJuiceItem CARROT_JUICE = new CarrotJuiceItem(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_JUICE).maxCount(8));
+    public static final CarrotJuiceItem CARROT_JUICE = new CarrotJuiceItem(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_JUICE).maxCount(16));
     public static final CarrotSoupItem CARROT_SOUP = new CarrotSoupItem(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_SOUP).maxCount(1));
     public static final Item CARROT_PASTRY = new Item(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.CARROT_PASTRY).maxCount(32));
     public static final Item DIAMOND_CARROT = new Item(new FabricItemSettings().group(CarrotifyMain).food(CarrotFoodComponent.DIAMOND_CARROT).maxCount(64));

@@ -23,6 +23,7 @@ public class Carrotify implements ModInitializer {
                     .dimensions(EntityDimensions.fixed(0.25F, 0.25F))
                     .trackRangeBlocks(4).trackedUpdateRate(10)
                     .build());
+
     @Override
     public void onInitialize() {
         registerItems();

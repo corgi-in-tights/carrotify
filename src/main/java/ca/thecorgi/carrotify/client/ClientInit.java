@@ -6,15 +6,14 @@ import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 
 import static ca.thecorgi.carrotify.Carrotify.UnstableCarrotEntityType;
 import static ca.thecorgi.carrotify.client.CarrotModelProvider.registerBowModels;
-import static ca.thecorgi.carrotify.client.PacketReciever.receiveEntityPacket;
+import static ca.thecorgi.carrotify.client.PacketReceiver.receiveEntityPacket;
 
 public class ClientInit implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
         registerBowModels();
-        EntityRendererRegistry.INSTANCE.register(UnstableCarrotEntityType, (dispatcher) ->
-                new FlyingItemEntityRenderer(dispatcher));
+        EntityRendererRegistry.INSTANCE.register(UnstableCarrotEntityType, FlyingItemEntityRenderer::new);
         receiveEntityPacket();
     }
 
