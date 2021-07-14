@@ -2,7 +2,6 @@ package ca.thecorgi.carrotify.entities;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
@@ -12,15 +11,16 @@ import net.minecraft.network.Packet;
 import net.minecraft.particle.ItemStackParticleEffect;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 
-import static ca.thecorgi.carrotify.Carrotify.ModID;
+import java.util.List;
+
 import static ca.thecorgi.carrotify.Carrotify.UnstableCarrotEntityType;
 import static ca.thecorgi.carrotify.client.PacketReciever.PacketID;
 import static ca.thecorgi.carrotify.registry.itemRegistry.UNSTABLE_CARROT;
@@ -72,12 +72,8 @@ public class UnstableCarrotEntity extends ThrownItemEntity {
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
         Entity entity = entityHitResult.getEntity();
-        int i = 5;
+        int i = 2;
         entity.damage(DamageSource.thrownProjectile(this, this.getOwner()), (float)i);
-
-        if (entity instanceof LivingEntity) {
-            world.playSound(null,getBlockPos(),SoundEvents.ENTITY_DRAGON_FIREBALL_EXPLODE, SoundCategory.BLOCKS,0.7F,0.4F);
-        }
     }
 
     protected void onCollision(HitResult hitResult) {
@@ -85,7 +81,14 @@ public class UnstableCarrotEntity extends ThrownItemEntity {
         if (!this.world.isClient) {
             this.world.sendEntityStatus(this, (byte)3);
             this.discard();
-            world.playSound(null,getBlockPos(),SoundEvents.ENTITY_DRAGON_FIREBALL_EXPLODE, SoundCategory.BLOCKS,1.5F,0.7F);
+            Box box = this.getBoundingBox().expand(1.4, 1.4, 1.4);
+            List<LivingEntity> livingEntities = world.getEntitiesByClass(LivingEntity.class, box, EntityPredicates.VALID_LIVING_ENTITY);
+            world.playSound(null,getBlockPos(),SoundEvents.ENTITY_DRAGON_FIREBALL_EXPLODE, SoundCategory.BLOCKS,0.8F,0.5F);
+            if (!livingEntities.isEmpty() && !this.world.isClient()) {
+                for (LivingEntity livingEntity : livingEntities) {
+                    livingEntity.damage(DamageSource.thrownProjectile(this, this.getOwner()), (float)4);
+                }
+            }
         }
     }
 }
